@@ -1,4 +1,6 @@
+
 ## Retail Store Database Management System
+![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/82a1be5c-aba1-4ffc-8f27-62569b58f675)
 
 ### Overview
 
@@ -22,7 +24,7 @@ This script provides a set of functionalities to manage a retail store database 
 
 1. Start the script:
     ```bash
-    python retail_store_management.py
+    python safertekexam.py
     ```
 2. Follow the on-screen instructions to perform various operations.
 
@@ -38,37 +40,32 @@ The script connects to the MySQL server using the provided credentials. It creat
 
 #### Menu Options
 
-1. **Insert Location Data**
-   - Prompts the user to enter location details and inserts the data into the `locations` table.
+1. **List All Customers**
+![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/7d6fa7a2-edba-454f-b89e-5e6571ba4d5f)
 
-2. **Insert Countries Data**
-   - Prompts the user to enter country details and inserts the data into the `countries` table.
-
-3. **Find Address**
-   - Prompts the user to enter a country name and retrieves all locations in that country by joining `locations` and `countries` tables.
-
-4. **List All Customers**
    - Retrieves and displays all records from the `Customers` table.
+![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/842a457d-36ff-4d59-8261-6a71958da671)
 
-5. **Find January 2023 Orders**
+
+3. **Find January 2023 Orders**
    - Retrieves and displays all orders placed in January 2023 from the `Orders` table.
 
-6. **Get Order Details**
+4. **Get Order Details**
    - Retrieves and displays details of all orders, including customer information, by joining `Orders` and `Customers` tables.
 
-7. **List Products in an Order**
+5. **List Products in an Order**
    - Prompts the user to enter an order ID and retrieves the products and quantities in that order by joining `OrderItems` and `Products` tables.
 
-8. **Calculate Total Amount Spent by Each Customer**
+6. **Calculate Total Amount Spent by Each Customer**
    - Calculates and displays the total amount spent by each customer by joining `Customers`, `Orders`, `OrderItems`, and `Products` tables.
 
-9. **Find the Most Popular Product**
+7. **Find the Most Popular Product**
    - Finds and displays the most popular product based on the total quantity sold by joining `OrderItems` and `Products` tables.
 
-10. **Get Monthly Sales in 2023**
+8. **Get Monthly Sales in 2023**
     - Retrieves and displays the total number of orders and sales amount for each month in 2023 by joining `Orders`, `OrderItems`, and `Products` tables.
 
-11. **Find Customers Who Spent More Than $1000**
+9. **Find Customers Who Spent More Than $1000**
     - Retrieves and displays customers who have spent more than $1000 by joining `Customers`, `Orders`, `OrderItems`, and `Products` tables.
 
 ### Error Handling
