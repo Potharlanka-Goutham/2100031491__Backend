@@ -1,6 +1,5 @@
 
 ## Retail Store Database Management System
-![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/82a1be5c-aba1-4ffc-8f27-62569b58f675)
 
 ### Overview
 
@@ -47,26 +46,55 @@ The script connects to the MySQL server using the provided credentials. It creat
 ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/842a457d-36ff-4d59-8261-6a71958da671)
 
 
-3. **Find January 2023 Orders**
+2. **Find January 2023 Orders**
+   -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/e389a81c-2277-46dd-938d-415edbd9ed99)
+
    - Retrieves and displays all orders placed in January 2023 from the `Orders` table.
+   - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/1f2b296e-362c-42ea-b129-4f0b89c61fa2)
 
-4. **Get Order Details**
+     
+
+3. **Get Order Details**
+   -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/43b360bc-6e36-457c-9406-4ed056ca2fca)
+
    - Retrieves and displays details of all orders, including customer information, by joining `Orders` and `Customers` tables.
+   - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/5b209e10-894a-4a8c-8d7f-f107fc00cd2b)
 
-5. **List Products in an Order**
+
+4. **List Products in an Order**
+   -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/04eb2406-b5d9-499d-bc28-315a7b65f75d)
+
    - Prompts the user to enter an order ID and retrieves the products and quantities in that order by joining `OrderItems` and `Products` tables.
+   - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/115cbc92-7951-4e3f-8769-6162b9740b6b)
 
-6. **Calculate Total Amount Spent by Each Customer**
+
+5. **Calculate Total Amount Spent by Each Customer**
+   -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/d2f5b74c-0484-4201-a56c-c78019048312)
+
    - Calculates and displays the total amount spent by each customer by joining `Customers`, `Orders`, `OrderItems`, and `Products` tables.
+   - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/047cbb50-0db2-4123-9fef-7cc1e5f5a9a9)
 
-7. **Find the Most Popular Product**
+
+6. **Find the Most Popular Product**
+   -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/255b4c5e-5535-42d1-a66c-093d49b66f79)
+
    - Finds and displays the most popular product based on the total quantity sold by joining `OrderItems` and `Products` tables.
+   - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/1fd36da2-e3ac-49f1-8f6a-2c2af85bd596)
 
-8. **Get Monthly Sales in 2023**
+
+7. **Get Monthly Sales in 2023**
+    -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/19262dff-5ecb-4d0c-b18b-57323764881c)
+
     - Retrieves and displays the total number of orders and sales amount for each month in 2023 by joining `Orders`, `OrderItems`, and `Products` tables.
+    - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/efd465fb-0d9d-4a2d-aafa-c14d65ca0f0c)
 
-9. **Find Customers Who Spent More Than $1000**
+
+8. **Find Customers Who Spent More Than $1000**
+    -![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/aede369f-842f-4edd-8a71-b62b98c178dd)
+
     - Retrieves and displays customers who have spent more than $1000 by joining `Customers`, `Orders`, `OrderItems`, and `Products` tables.
+    - ![image](https://github.com/Potharlanka-Goutham/2100031491__Backend/assets/110443146/14f25a84-b6c6-45cb-994c-d5378fdc36ed)
+
 
 ### Error Handling
 
