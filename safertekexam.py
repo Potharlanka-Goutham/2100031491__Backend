@@ -1,41 +1,6 @@
 import mysql.connector
 
-def insert_location_data(cur):
-    print("Enter Location table data:")
-    print()
-    street_address = input("Enter street address: ")
-    city = input("Enter city: ")
-    state_province = input("Enter state/province: ")
-    country_id = input("Enter country code: ")
-    print()
-    sql = "INSERT INTO locations (street_address, city, state_province, country_id) VALUES (%s, %s, %s, %s)"
-    val = (street_address, city, state_province, country_id)
-    cur.execute(sql, val)
 
-def insert_country_data(cur):
-    print("Enter Countries table data:")
-    print()
-    country_id = input("Enter country ID: ")
-    country_name = input("Enter country Name: ")
-    region_id = input("Enter region id: ")
-    print()
-    sql = "INSERT INTO countries (country_id, country_name, region_id) VALUES (%s, %s, %s)"
-    val = (country_id, country_name, region_id)
-    cur.execute(sql, val)
-
-def find_address(cur):
-    country_name = input("Enter country name to apply join condition on that country name: ")
-    cur.execute('''SELECT l.location_id, l.street_address, l.city, l.state_province, c.country_name, c.country_id
-                   FROM locations l
-                   JOIN countries c ON l.country_id = c.country_id
-                   WHERE c.country_name = %s''', (country_name,))
-    rows = cur.fetchall()
-    print()
-    for row in rows:
-        print(row)
-    print()
-
-# Define functions for the retail store queries
 def list_all_customers(cur):
     cur.execute('SELECT * FROM Customers')
     customers = cur.fetchall()
@@ -178,36 +143,30 @@ try:
                 )''')
 
     actions = {
-        '1': insert_location_data,
-        '2': insert_country_data,
-        '3': find_address,
-        '4': list_all_customers,
-        '5': find_january_orders,
-        '6': order_details,
-        '7': products_in_order,
-        '8': total_spent_by_customers,
-        '9': most_popular_product,
-        '10': monthly_sales_2023,
-        '11': customers_spent_more_than_1000
+        '1': list_all_customers,
+        '2': find_january_orders,
+        '3': order_details,
+        '4': products_in_order,
+        '5': total_spent_by_customers,
+        '6': most_popular_product,
+        '7': monthly_sales_2023,
+        '8': customers_spent_more_than_1000
     }
 
     while True:
         print("Select an option:")
-        print("1. Insert Location Data")
-        print("2. Insert Countries Data")
-        print("3. Find Address")
-        print("4. List All Customers")
-        print("5. Find January 2023 Orders")
-        print("6. Get Order Details")
-        print("7. List Products in an Order")
-        print("8. Calculate Total Amount Spent by Each Customer")
-        print("9. Find the Most Popular Product")
-        print("10. Get Monthly Sales in 2023")
-        print("11. Find Customers Who Spent More Than $1000")
-        print("12. Exit")
+        print("1. List All Customers")
+        print("2. Find January 2023 Orders")
+        print("3. Get Order Details")
+        print("4. List Products in an Order")
+        print("5. Calculate Total Amount Spent by Each Customer")
+        print("6. Find the Most Popular Product")
+        print("7. Get Monthly Sales in 2023")
+        print("8. Find Customers Who Spent More Than $1000")
+        print("9. Exit")
         choice = input("Enter your choice: ")
 
-        if choice == '12':
+        if choice == '9':
             break
 
         action = actions.get(choice)
@@ -225,3 +184,5 @@ finally:
         cur.close()
     if 'conn' in locals() and conn is not None:
         conn.close()
+
+
